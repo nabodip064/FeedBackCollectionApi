@@ -1,0 +1,12 @@
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\bin\Debug\netcoreapp3.1\FeedBackDAL.deps.json
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\bin\Debug\netcoreapp3.1\FeedBackDAL.dll
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\obj\Debug\netcoreapp3.1\FeedBackDAL.csprojAssemblyReference.cache
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\obj\Debug\netcoreapp3.1\FeedBackDAL.AssemblyInfoInputs.cache
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\obj\Debug\netcoreapp3.1\FeedBackDAL.AssemblyInfo.cs
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\bin\Debug\netcoreapp3.1\FeedBackDAL.runtimeconfig.json
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\bin\Debug\netcoreapp3.1\FeedBackDAL.runtimeconfig.dev.json
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\bin\Debug\netcoreapp3.1\FeedBackDAL.pdb
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\obj\Debug\netcoreapp3.1\FeedBackDAL.dll
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\obj\Debug\netcoreapp3.1\FeedBackDAL.pdb
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\obj\Debug\netcoreapp3.1\FeedBackDAL.genruntimeconfig.cache
+H:\Project\FeedBackCollection\Nabodip_FeedBackCollection\FeedBackDAL\obj\Debug\netcoreapp3.1\FeedBackDAL.csproj.CoreCompileInputs.cache
