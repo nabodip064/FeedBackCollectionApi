@@ -9,9 +9,8 @@ namespace FeedBackDAL.DataAccess
 {
     public class VotInformationDataAccess
     {
-        public DataTable GetCustomVotList(string postSearh)
+        public DataTable GetCustomVotList(int postID)
         {
-            List<CustomVoteInfo> list = new List<CustomVoteInfo>();
             var dataTable = new DataTable();
             using (var context = new FeedBackDBContext())
             {
@@ -22,7 +21,26 @@ namespace FeedBackDAL.DataAccess
 	                    (select sum(ID) from VoteInfo v where v.CommentID = c.ID and v.AggreByVote = 0) as DisAggreCount from CommentInfo as c
                         inner join PostInfo p on c.PostID = p.ID
                         inner join UserInfo u on u.ID = c.UserID
-                        where p.Post like '%" + postSearh + "%'";
+                        where p.ID = " + postID.ToString();
+                    context.Database.OpenConnection();
+                    var dataReader = command.ExecuteReader();
+                    dataTable.Load(dataReader);
+                }
+            }
+            return dataTable;
+        }
+        public DataTable GetPostList(string postSearh)
+        {
+            var dataTable = new DataTable();
+            using (var context = new FeedBackDBContext())
+            {
+                using (var command = context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = @"SELECT p.ID as  PostID, p.Post, u.UserID , p.CreateDate, sum(c.ID) as TotalComment from PostInfo as p
+                        inner join UserInfo u on u.ID = p.UserID
+                        inner join CommentInfo c on c.PostID = p.ID
+                        where p.Post like '%" + postSearh +
+                        "%' Group by p.ID, p.Post, u.UserID , p.CreateDate";
                     context.Database.OpenConnection();
                     var dataReader = command.ExecuteReader();
                     dataTable.Load(dataReader);

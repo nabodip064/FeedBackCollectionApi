@@ -14,6 +14,7 @@ namespace FeedBackApi
 {
     public class Startup
     {
+        //readonly string MyAllowSpecificOrigins = "AllowOrigin";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -24,6 +25,15 @@ namespace FeedBackApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                //options.AddPolicy(name: MyAllowSpecificOrigins,
+                //                  builder =>
+                //                  {
+                //                      builder.WithOrigins("http://localhost:3000/");
+                //                  });
+                options.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
             services.AddControllers();
         }
 
@@ -36,6 +46,7 @@ namespace FeedBackApi
             }
 
             app.UseRouting();
+            app.UseCors(options => options.AllowAnyOrigin());
 
             app.UseAuthorization();
 
